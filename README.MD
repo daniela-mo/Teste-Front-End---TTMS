@@ -21,6 +21,8 @@ npm run dev ( para rodar a aplicação)
 - Utilizei o yarn
 
 
+- Aproveitei para praticar o uso do state e entender melhor quando e como devo usa-lo
+
 
 
 
