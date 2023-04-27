@@ -1,0 +1,9 @@
+{
+  "pessoas": [
+    {
+      "id": 1,
+      "nome": "Admin",
+      "email": "admin@admin.com"
+    }
+  ]
+}
