@@ -10,7 +10,8 @@
 ### Select a variant: TypeScript
 
 ## Executando o projeto
-
+ Execute os seguintes comandos para rodar a aplicação
+ 
 ``` npm run dev ``` ( para rodar a aplicação) 
 `` npm mook `` (para rodar a api)
 
