@@ -10,10 +10,9 @@
 ### Select a variant: TypeScript
 
 ## Executando o projeto
-### cd testeFrontEnd
-### code .
-### npm install
-### npm run dev ( para rodar a aplicação)
+
+``` npm run dev ``` ( para rodar a aplicação) 
+`` npm mook `` (para rodar a api)
 
 
 ## Instalado o MUI
