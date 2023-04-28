@@ -30,4 +30,6 @@ https://www.youtube.com/watch?v=oXb-UE60KkI
 https://vitejs.dev/
 
 
+- Usando Json-server para simular o backend
 
+-Utilizando axios
