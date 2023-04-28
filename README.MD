@@ -17,8 +17,9 @@
 ## Aproveitei para praticar e me familiarizar com o uso stata
 
  
-https://www.youtube.com/watch?v=oXb-UE60KkI
+https://mui.com/joy-ui/react-grid/
 https://vitejs.dev/
+https://www.npmjs.com/
 
 
 ## Usando Json-server para simular o backend
