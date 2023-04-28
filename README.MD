@@ -1,4 +1,4 @@
-Aplicação com login, validação de email e senha e consumo de api 
+# Aplicação com login, validação de email e senha e consumo de api 
 
 
 ## Projeto criado com vite 
