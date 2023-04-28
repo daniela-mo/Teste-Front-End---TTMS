@@ -3,6 +3,7 @@ import {
   Divider,
   Drawer,
   Icon,
+  Typography,
   List,
   ListItemButton,
   ListItemIcon,
@@ -12,12 +13,14 @@ import {
 } from "@mui/material";
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import { Box } from "@mui/system";
+import axios from "axios";
 
 import {
   useAppThemeContext,
   useDrawerContext,
   useAuthContext,
 } from "../../contexts";
+import { useEffect, useState } from "react";
 
 interface IListItemLinkProps {
   to: string;
@@ -55,6 +58,22 @@ interface IMenuLateralProps {
   children: React.ReactNode;
 }
 export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
+  const [pessoas, setPessoas] = useState();
+
+  const adminUser = async () => {
+    try {
+      const res = await axios.get("http://localhost:3333/pessoas");
+      console.log(res);
+      setPessoas(res.data[0]);
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
+  useEffect(() => {
+    adminUser();
+  }, []);
+
   const theme = useTheme();
   const smDown = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -82,8 +101,12 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
             justifyContent="center">
             <Avatar
               sx={{ height: theme.spacing(12), width: theme.spacing(12) }}
-              src=""
             />
+          </Box>
+          <Box display="flex" alignItems="center" justifyContent="center">
+            <Typography variant="body1" margin={2}>
+              {pessoas?.nome}
+            </Typography>
           </Box>
 
           <Divider />

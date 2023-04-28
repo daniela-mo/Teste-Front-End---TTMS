@@ -1,5 +1,7 @@
 import { AxiosError } from "axios";
 
+import { Api } from "../axios-config";
+
 interface IAuth {
   accessToken: string;
 }
@@ -9,7 +11,9 @@ const auth = async (
   password: string
 ): Promise<IAuth | Error> => {
   try {
-    const { data } = await Api().post("/entrar", { email, senha: password });
+    const { data } = await Api().post("/auth", { email, senha: password });
+
+    console.log(data);
 
     if (data) {
       return data;

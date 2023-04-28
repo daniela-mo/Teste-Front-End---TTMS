@@ -26,7 +26,7 @@ export const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
   const [accessToken, setAccessToken] = useState<string>();
 
   useEffect(() => {
-    const accessToken = localStorage.getItem(LOCAL_STORAGE_KEY__ACCESS_TOKEN);
+    const accessToken = localStorage?.getItem(LOCAL_STORAGE_KEY__ACCESS_TOKEN);
 
     if (accessToken) {
       setAccessToken(JSON.parse(accessToken));
@@ -37,14 +37,20 @@ export const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
 
   const handleLogin = useCallback(async (email: string, password: string) => {
     const result = await AuthService.auth(email, password);
+
+    const token = "kjdfsf5ds4sdfg5sd4f5ds4f54sdf54";
+
+    console.log(result);
+
     if (result instanceof Error) {
       return result.message;
     } else {
       localStorage.setItem(
         LOCAL_STORAGE_KEY__ACCESS_TOKEN,
-        JSON.stringify(result.accessToken)
+        JSON.stringify(token)
       );
-      setAccessToken(result.accessToken);
+
+      setAccessToken(token);
     }
   }, []);
 
@@ -52,6 +58,7 @@ export const AuthProvider: React.FC<IAuthProviderProps> = ({ children }) => {
     localStorage.removeItem(LOCAL_STORAGE_KEY__ACCESS_TOKEN);
     setAccessToken(undefined);
   }, []);
+  // console.log(accessToken);
 
   const isAuthenticated = useMemo(() => !!accessToken, [accessToken]);
 

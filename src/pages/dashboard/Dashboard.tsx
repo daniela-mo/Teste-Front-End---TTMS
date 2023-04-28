@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { LayoutBaseDePagina } from "../../shared/layouts";
 
 import { Box, Grid, Card, CardContent, Typography } from "@mui/material";
+
 import axios from "axios";
 
 export const Dashboard = () => {
@@ -20,8 +21,6 @@ export const Dashboard = () => {
     }
   };
 
-  console.log(cotacao.time.updated.split(" ")[3]);
-
   useEffect(() => {
     coinDesk();
   }, []);
@@ -31,11 +30,11 @@ export const Dashboard = () => {
       <Box width="100%" display="flex">
         <Grid container margin={2}>
           <Grid item container>
-            <Grid item xs={12} sm={12} md={6} lg={4} xl={2}>
+            <Grid item xs={12} sm={12} md={8} lg={4} xl={4}>
               <Card>
                 <CardContent>
                   <Typography variant="h5" align="center" padding={3}>
-                    Cotação em Dolar
+                    CoinDesk
                   </Typography>
 
                   <Box
@@ -52,10 +51,13 @@ export const Dashboard = () => {
                     padding={3}
                     display="flex"
                     justifyContent="center"
-                    alignItems="center">
+                    alignItems="center"
+                    flexDirection="column">
+                    <Typography variant="h6">Ultima Atualização ás</Typography>
                     <Typography variant="h6">
-                      Ultima Hora: {cotacao?.time?.updated.split(" ")[3]}
+                      {cotacao?.time?.updated.split(" ")[3]}
                     </Typography>
+                    <Typography variant="body">(horário americano)</Typography>
                   </Box>
                 </CardContent>
               </Card>

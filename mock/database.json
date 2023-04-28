@@ -2,8 +2,12 @@
   "pessoas": [
     {
       "id": 1,
-      "nome": "Admin",
-      "email": "admin@admin.com"
+      "nome": "Administrador"
     }
-  ]
+  ],
+  "auth": {
+    "id": 1,
+    "email": "admin@admin.com",
+    "senha": "admin@admin.com"
+  }
 }
