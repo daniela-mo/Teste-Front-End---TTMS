@@ -4,7 +4,7 @@
 ## Projeto criado com vite 
 
 ## Criação do projeto
-### npm create vite@latest
+``` npm create vite@latest ```
 ### Project name: testeFrontEnd
 ### Select a framework: React 
 ### Select a variant: TypeScript
