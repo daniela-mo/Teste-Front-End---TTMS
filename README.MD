@@ -1,35 +1,28 @@
-- Projeto criado com vite - Já cria o projeto todo configurado. 
-npm create vite@latest
-Project name: testeFrontEnd
-Select a framework: React 
-Select a variant: TypeScript
+# Projeto criado com vite - Já cria o projeto todo configurado. 
 
-cd testeFrontEnd
-code .
+## Criação do projeto
+### npm create vite@latest
+### Project name: testeFrontEnd
+### Select a framework: React 
+### Select a variant: TypeScript
 
-Dentro do terminal VsCode :
-
-npm install
-npm run dev ( para rodar a aplicação)
-
-- Utilizando TypeScript
+## Executando o projeto
+### cd testeFrontEnd
+### code .
+### npm install
+### npm run dev ( para rodar a aplicação)
 
 
-- Instalado o MUI
+## Instalado o MUI
+## Aproveitei para praticar e me familiarizar com o uso stata
 
-
-- Utilizei o yarn
-
-
-- Aproveitei para praticar o uso do state e entender melhor quando e como devo usa-lo
-
-
-
-
+ 
 https://www.youtube.com/watch?v=oXb-UE60KkI
 https://vitejs.dev/
 
 
-- Usando Json-server para simular o backend
+## Usando Json-server para simular o backend
 
--Utilizando axios
+## Utilizando axios para as apis
+
+
