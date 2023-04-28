@@ -1,4 +1,4 @@
-# Projeto criado com vite - Já cria o projeto todo configurado. 
+# Projeto criado com vite 
 
 ## Criação do projeto
 ### npm create vite@latest
