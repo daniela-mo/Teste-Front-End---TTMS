@@ -13,7 +13,11 @@ import {
 import { useMatch, useNavigate, useResolvedPath } from "react-router-dom";
 import { Box } from "@mui/system";
 
-import { useAppThemeContext, useDrawerContext } from "../../contexts";
+import {
+  useAppThemeContext,
+  useDrawerContext,
+  useAuthContext,
+} from "../../contexts";
 
 interface IListItemLinkProps {
   to: string;
@@ -57,6 +61,7 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
   const { isDrawerOpen, drawerOptions, toggleDrawerOpen } = useDrawerContext();
 
   const { toggleTheme } = useAppThemeContext();
+  const { logout } = useAuthContext();
 
   return (
     <>
@@ -105,12 +110,12 @@ export const MenuLateral: React.FC<IMenuLateralProps> = ({ children }) => {
                 </ListItemIcon>
                 <ListItemText primary="Alternar tema" />
               </ListItemButton>
-              {/* <ListItemButton>
+              <ListItemButton onClick={logout}>
                 <ListItemIcon>
                   <Icon>logout</Icon>
                 </ListItemIcon>
                 <ListItemText primary="Sair" />
-              </ListItemButton> */}
+              </ListItemButton>
             </List>
           </Box>
         </Box>

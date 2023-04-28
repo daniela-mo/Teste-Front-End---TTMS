@@ -1,4 +1,4 @@
-export const Enviroment = {
+export const Environment = {
   /**
    * Url base de consulta dos dados dessa aplicação
    */
