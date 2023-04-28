@@ -1,4 +1,7 @@
-# Projeto criado com vite 
+Aplicação com login, validação de email e senha e consumo de api 
+
+
+## Projeto criado com vite 
 
 ## Criação do projeto
 ### npm create vite@latest
