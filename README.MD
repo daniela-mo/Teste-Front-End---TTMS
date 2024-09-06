@@ -17,7 +17,7 @@
 
 
 ## Instalado o MUI
-## Aproveitei para praticar e me familiarizar com o uso stata
+## Aproveitei para praticar e me familiarizar com o uso state
 
  
 https://mui.com/joy-ui/react-grid/
